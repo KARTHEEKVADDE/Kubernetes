@@ -1,0 +1,32 @@
+{{ define "Edit" }}
+    {{ template "Header" }} 
+    <div style="text-align:center"><h4 align:center> <a href="/index">HOME</a></h4>
+    <h2>Edit Details</h2>  
+    <form method="POST" action="update">
+        <input type="hidden" name="uid" value="{{ .Id }}" />
+        <table border="1" align="center">
+        <thead align='left'>
+        <tr> <td style="color:grey">Name</td><td><input type="text" name="name" value="{{ .Name }}" /></td> </tr>
+        <tr> <td style="color:grey">Mobile</td> <td><input type="mobile" name="mobile" value="{{ .Mobile }}" /></td> </tr>
+        <tr> <td style="color:grey">Years Of Experience</td> <td><input type="int" name="yearsOfExperience" value="{{ .YearsOfExperience }}" /></td> </tr>
+        <tr> <td style="color:grey">Email</td> <td><input type="text" name="email" value="{{ .Email }}" /></td> </tr>
+        <tr> <td style="color:grey">Project Name</td> <td><input type="text" name="projectName" value="{{ .ProjectName }}" /></td> </tr>
+        <tr> <td style="color:grey">Designation</td> <td><input type="text" name="designation" value="{{ .Designation }}" /></td> </tr>
+        <tr> <td style="color:grey">Employee Status</td> <td><input type="text" name="employeeStatus" value="{{ .EmployeeStatus }}" /></td> </tr>
+        <tr> <td style="color:grey">Skillset</td> <td><input type="text" name="skillset" value="{{ .Skillset }}" /></td> </tr>
+        <tr> <td style="color:grey">Completed Trainings</td> <td><input type="text" name="completedTrainings" value="{{ .CompletedTrainings }}" /></td> </tr>
+        <tr> <td style="color:grey">Project Acquired Skills</td> <td><input type="text" name="projectAquiredSkills" value="{{ .ProjectAquiredSkills }}" /></td> </tr>
+        <tr> <td style="color:grey">Achievements</td> <td><input type="text" name="achievements" value="{{ .Achievements }}" /></td> </tr>
+        <tr> <td style="color:grey">Github</td> <td><input type="text" name="github" value="{{ .Github }}" /></td> </tr>
+        <tr> <td style="color:grey">Linkedin</td> <td><input type="text" name="linkedin" value="{{ .Linkedin }}" /></td> </tr>
+        <tr> <td style="color:grey">Techgig</td> <td><input type="text" name="techgig" value="{{ .Techgig }}" /></td> </tr>
+        <tr> <td style="color:grey">Hacker Rank</td> <td><input type="text" name="hackerRank" value="{{ .HackerRank }}" /></td> </tr>
+
+        </thead>
+      
+      </table>
+      <br /><input type="submit" value="Save User" />
+    </form>    
+    </div>
+  {{ template "Footer" }}
+{{ end }}

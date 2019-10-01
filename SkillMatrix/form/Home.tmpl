@@ -1,0 +1,13 @@
+{{ define "Home" }}
+    {{ template "Header"  }}
+    <div style="text-align:center">
+      <a href="/login">LOGIN</a> 
+    </div>
+    <script type="text/javascript">
+      history.pushState(null, null, location.href);
+      window.onpopstate = function(){
+        history.go(1);
+      };
+    </script>
+    {{ template "Footer"  }}
+{{ end }}

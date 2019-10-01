@@ -1,0 +1,14 @@
+{{ define "Index" }}
+    {{ template "Header"  }}
+    <div style="text-align:center">
+      <a href="/edit">UPDATE</a> | <a href="/home">LOGOUT</a>
+
+      <h2> User Details</h2>
+          <td>Account Number: {{ .AcNo }}</td>
+          <td>Name: {{ .Name }}</td>
+          <td>Mobile: {{ .Mobile }}</td>
+          <td>Email: {{ .Email }}</td>
+          <td>Balance: {{ .Balance }}</td>
+      </div>
+  {{ template "Footer" }}
+{{ end }}

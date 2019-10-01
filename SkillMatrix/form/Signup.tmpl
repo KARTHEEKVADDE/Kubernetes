@@ -1,0 +1,14 @@
+{{ define "Signup" }}
+    {{ template "Menu" }}
+      <div style="text-align:center">
+      <h3>Please Enter New Credentials</h3>
+        <form method="POST" action="checkin">
+          <input type="string" name="id" placeholder="User ID"/><br /><br />
+          <input type="password" name="password" placeholder="Password"/><br /><br />
+          <input type="password" name="confirmPassword" placeholder="Confirm Password"/><br /><br />
+          
+          <input type="submit" value="Sign Up" />
+        </form>
+        </div>
+  {{ template "Footer" }}
+{{ end }}

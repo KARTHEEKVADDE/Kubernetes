@@ -1,0 +1,24 @@
+<html>
+    <title>  An App  </title>
+    <head> </head>
+    <body>
+        <a href="/create">CREATE</a>
+        <h2> Item Details</h2>
+        <table id="myTable" border="1">
+            <thead>
+                <tr style="color:grey"> <th>Name</th> <th>Price</th> <th>Update</th> <th>Delete</th> </tr>
+            </thead>
+            <tbody>
+                {{ range . }}
+                    <tr>
+                    <td><a href="/readone?name={{ .Name }}">{{ .Name }}</a></td>
+                    <td>{{ .Price }} </td>
+                    
+                    <td><a href="/update?name={{ .Name }}">Update</a></td>
+                    <td><a href="/delete?name={{ .Name }}">Delete</a><td>
+                    </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+{{ define "Show" }}
+  {{ template "Header"  }}
+    <div style="text-align:center"><h4 align:center> <a href="/index">HOME</a> |
+      <a href="/edit?id={{ .Id }}">EDIT</a></p> </h4>
+    <h2 align:center> {{ .Name }} Details</h2>
+    <table border="1" align="center">
+        <thead align='left'>
+        <tr> <td style="color:grey">Name</td> <td><a href="/show?id={{ .Id }}">{{ .Name }}</a></td> </tr>
+        <tr> <td style="color:grey">Mobile</td> <td>{{ .Mobile }} </td> </tr>
+        <tr> <td style="color:grey">Years Of Experience</td> <td>{{ .YearsOfExperience }} </td> </tr>
+        <tr> <td style="color:grey">Email</td> <td>{{ .Email }} </td> </tr>
+        <tr> <td style="color:grey">Project Name</td> <td>{{ .ProjectName }}</td> </tr>
+        <tr> <td style="color:grey">Designation</td> <td>{{ .Designation }}</td> </tr>
+        <tr> <td style="color:grey">Employee Status</td> <td>{{ .EmployeeStatus }}</td> </tr>
+
+        <tr> <td style="color:grey">Skillset</td> <td>{{ .Skillset }}</td> </tr>
+        <tr> <td style="color:grey">Completed Trainings</td> <td>{{ .CompletedTrainings }}</td> </tr>
+        <tr> <td style="color:grey">Project Acquired Skills</td> <td>{{ .ProjectAquiredSkills }}</td> </tr>
+        <tr> <td style="color:grey">Achievements</td> <td>{{ .Achievements }}</td> </tr>
+        <tr> <td style="color:grey">Github</td> <td>{{ .Github }}</td> </tr>
+        <tr> <td style="color:grey">Linkedin</td> <td>{{ .Linkedin }}</td> </tr>
+        <tr> <td style="color:grey">Techgig</td> <td>{{ .Techgig }}</td> </tr>
+        <tr> <td style="color:grey">Hacker Rank</td> <td>{{ .HackerRank }}</td> </tr>
+        </thead>
+        <tbody>
+        
+        </tbody>
+      </table>
+    </div>
+  {{ template "Footer" }}
+{{ end }}

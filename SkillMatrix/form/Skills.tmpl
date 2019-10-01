@@ -1,0 +1,74 @@
+{{ define "Skills" }}
+    {{ template "Header"  }}
+    <div style="text-align:center">
+      <a href="/">HOME</a> | <a href="/">LOGOUT</a>
+      <form method="POST" action="search" style="text-align:right">
+        <label> Search </label><input type="text" id="myInput" onkeyup="f()" placeholder="Key Skills" name="keyword" />
+      </form>
+      <form method="POST" action="skill">
+          <div style="text-align:left"><label> Add Skill </label><input type="text"  placeholder="New Skill" name="skill"/>
+          <input type="submit" value="Add" /></div>
+      </form>
+      <h2> Employee Details</h2>
+      <table id="myTable" border="1">
+        <thead>
+        <tr style="color:grey">
+          <th>Name</th>
+          <th>Years Of Experience</th>
+          <th>Project Name</th>
+          <th>Designation</th>
+          <th>Skillset</th>
+          <th>Completed Trainings</th>
+          <th>Project Acquired Skills</th>
+          <th>Achievements</th>
+          <th>Employee Status</th>
+  
+          <th>View</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+      {{ range . }}
+        <tr>
+          <td><a href="/show?id={{ .Id }}">{{ .Name }}</a></td>
+          <td>{{ .YearsOfExperience }} </td>
+          <td>{{ .ProjectName }}</td>
+          <td>{{ .Designation }}</td>
+          <td>{{ .Skillset }}</td>
+          <td>{{ .CompletedTrainings }}</td>
+          <td>{{ .ProjectAquiredSkills }}</td>
+          <td>{{ .Achievements }}</td>
+          <td>{{ .EmployeeStatus }}</td>
+  
+          <td><a href="/show?id={{ .Id }}">View</a></td>
+          <td><a href="/edit?id={{ .Id }}">Edit</a></td>
+          <td><a href="/delete?id={{ .Id }}">Delete</a><td>
+        </tr>
+      {{ end }}
+        </tbody>
+      </table>
+      </div>
+      <script>
+        function f(){
+          var td, tdArr, i, j;
+          var input = document.getElementById("myInput");
+          var filter = input.value.toUpperCase();
+          var table = document.getElementById("myTable");
+          var tr = table.getElementsByTagName("tr");
+          var th = table.getElementsByTagName("th");
+          for(i=1; i<tr.length; i++){
+            tr[i].style.display = "none";
+            for(j=0; j<th.length; j++){
+              td = tr[i].getElementsByTagName("td")[j];
+              if(td){
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1){
+                  tr[i].style.display = ""; break;
+                }
+              }
+            }
+          }
+        }
+      </script>
+  {{ template "Footer" }}
+{{ end }}

@@ -1,0 +1,15 @@
+{{ define "Edit" }}
+    {{ template "Header" }} 
+    <div style="text-align:center"><h4 align:center> <a href="/index">HOME</a></h4>
+   <h2>Edit Details</h2>  
+    <form method="POST" action="update">
+      <input type="hidden" name="uid" placeholder="Account Number" value="{{ .AcNo }}" />
+      <input type="text" name="name" placeholder="Name" value="{{ .Name }}"  /><br />
+      <input type="int" name="mobile" placeholder="Mobile" value="{{ .Mobile }}"  /><br />
+      <input type="email" name="email" placeholder="Email" value="{{ .Email }}"  /><br />
+      
+      <br /><input type="submit" value="Save" />
+    </form><br />    
+    </div>
+  {{ template "Footer" }}
+{{ end }}

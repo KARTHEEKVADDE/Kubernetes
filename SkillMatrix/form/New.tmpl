@@ -1,0 +1,27 @@
+{{ define "New" }}
+    {{ template "Header" }}
+    <div style="text-align:center"><h4 align:center> <a href="/index">HOME</a>
+    <h2>New Employee Details</h2>  
+      <form method="POST" action="insert">
+        <table align='center' width='30%'>
+        <tr> <td align='left' style="color:grey">Name</td> <td><input type="text" name="name" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Mobile</td> <td><input type="mobile" name="mobile" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Email</td> <td><input type="email" name="email" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Years Of Experience</td> <td><input type="int" name="yearsOfExperience" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Project Name</td> <td><input type="text" name="projectName" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Designation</td> <td><input type="text" name="designation" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Skillset</td> <td><input type="text" name="skillset" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Completed Trainings</td> <td><input type="text" name="completedTrainings" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Project Aquired Skills</td> <td><input type="text" name="projectAquiredSkills" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Achievements</td> <td><input type="text" name="achievements" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Employee Status</td> <td><input type="text" name="employeeStatus" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Github</td> <td><input type="text" name="github" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Linkedin</td> <td><input type="text" name="linkedin" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Techgig</td> <td><input type="text" name="techgig" /></td> </tr>
+        <tr> <td align='left' style="color:grey">Hacker Rank</td> <td><input type="text" name="hackerRank" /></td> </tr>
+        </table>
+        <br /><input type="submit" value="Save User" />
+      </form>
+      </div>
+  {{ template "Footer" }}
+{{ end }}

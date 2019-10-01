@@ -1,0 +1,13 @@
+{{ define "Login" }}
+    {{ template "Menu"  }}
+    <div style="text-align:center">
+      <h3>Please Enter Correct Credentials</h3>
+      <form method="POST" action="checkout">
+        <input type="string" name="id" placeholder="User ID"/><br /><br />
+        <input type="password" name="password" placeholder="Password"/><br /><br />
+
+        <input type="submit" value="Log In" />
+      </form>
+    </div>
+  {{ template "Footer" }}
+{{ end }}
